@@ -1,0 +1,17 @@
+{
+  "name": "quilts",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": ">= 0.0.1",
+    "grunt-contrib-watch": ">= 0.0.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-concat": ">= 0.0.1",
+    "grunt-contrib-compass": "~0.4.1",
+    "grunt-image-resize": "~0.3.0",
+    "grunt-contrib-jade": "~0.8.0"
+  }
+}

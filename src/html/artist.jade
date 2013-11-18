@@ -1,0 +1,53 @@
+extends layout
+
+block content
+
+    a.home-link(href="http://www.michaelfester.com") &laquo; Back to michaelfester.com
+
+    .menu
+        a(href="index.html") Index
+        - each artistId, i in Object.keys(artists)
+            if artists[artistId].isMain
+                a(href="#{artistId}.html") #{artistId}
+
+    h1 #{artist.name}
+    h2 #{artist.born} <span class="sep">&mdash;</span> #{artist.died}
+
+    p.sort <span>Sort by</span>&nbsp;&nbsp;<a id="sortByDate" class="active" href="#">DATE</a>&nbsp;&nbsp;<a id="sortBySize" href="#">SIZE</a>
+
+    .loading
+        p Loading
+
+    .gallery
+        - each artwork, i in artist.artworks
+            a.tooltip.fancybox(rel="gallery",href="#{artwork.file}",year="#{artwork.year}",dimens="#{artwork.dimensions}",caption="#{artwork.year} - #{artwork.title} - #{artwork.dimensions} - #{artwork.materials}",title="#{artwork.tooltipContents}")
+                img.thumb(src="#{artwork.thumbFile}",alt="")
+
+    p.copyright All artworks reproduced here are in the public domain. <a href="http://copyright.cornell.edu/resources/publicdomain.cfm" target="_blank">Read more</a>.
+
+    script.
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                padding : 0,
+                closeBtn : false,
+                nextEffect: 'fade',
+                prevEffect: 'fade',
+                beforeShow: function() {
+                    $('body').tooltipster('hide');
+                },
+                beforeLoad: function() {
+                    this.title = $(this.element).attr('caption');
+                },
+                helpers : {
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(0, 0, 0, 0.9)'
+                        }
+                    },
+                }
+            });
+
+            $("#sortByDate").click(function() { sortByDate(true); });
+            $("#sortBySize").click(function() { sortByDate(false); });
+
+        });

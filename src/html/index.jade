@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+    a.home-link(href="http://www.michaelfester.com") &laquo; Back to michaelfester.com
+
+    .artist-index
+        - each artistId, i in Object.keys(artists)
+            if artists[artistId].isMain
+                h1
+                    a(href="#{artistId}.html") #{artists[artistId].name}
+
+        .sublinkContainer
+            - each artistId, i in Object.keys(artists).sort()
+                if !artists[artistId].isMain
+                    h3
+                        a(href="#{artistId}.html") #{artists[artistId].name}
+
+
+    p.copyright All artworks reproduced here are in the public domain. <a href="http://copyright.cornell.edu/resources/publicdomain.cfm" target="_blank">Read more</a>.

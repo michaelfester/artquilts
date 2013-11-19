@@ -24,7 +24,7 @@ upload:
 
 init:
 	rm -fr data/$(ARTIST_ID)
-	mkdir data/$(ARTIST_ID)
+	mkdir -p data/$(ARTIST_ID)
 	rm -fr build/img/$(ARTIST_ID)
 
 grunt:

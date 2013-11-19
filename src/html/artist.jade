@@ -20,7 +20,7 @@ block content
 
     .gallery
         - each artwork, i in artist.artworks
-            a.tooltip.fancybox(rel="gallery",href="#{artwork.file}",year="#{artwork.year}",dimens="#{artwork.dimensions}",caption="#{artwork.year} - #{artwork.title} - #{artwork.dimensions} - #{artwork.materials}",title="#{artwork.tooltipContents}")
+            a.tooltip.fancybox(rel="gallery",href="#{artwork.file}",year="#{artwork.year}",dimens="#{artwork.dimensions}",caption="#{artwork.fancyboxCaption}",title="#{artwork.tooltipContents}")
                 img.thumb(src="#{artwork.thumbFile}",alt="")
 
     p.copyright All artworks reproduced here are in the public domain. <a href="http://copyright.cornell.edu/resources/publicdomain.cfm" target="_blank">Read more</a>.

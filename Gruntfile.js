@@ -61,17 +61,22 @@ var extractData = function(filename, relativePath) {
     var title = size > 1 ? chunks[1] : "Unknown";
     var dimensions = size > 2 ? chunks[2] : "Unknown";
     var materials = size > 3 ? chunks[3] : "Unknown";
+
     var tooltipContents = "<p class=\"year\">"+year+"</p><p class=\"title\">"+title+"</p>";
     if(dimensions != "Unknown") tooltipContents += "<p class=\"dimensions\">" + dimensions + "</p>";
     if(materials != "Unknown") tooltipContents += "<p class=\"materials\">" + materials + "</p>";
+
+    var fancyboxCaption = year + " - " + title + " - " + ((dimensions == "Unknown") ? "Dimensions: unknown" : dimensions) + " - " + ((materials == "Unknown") ? "Materials: unknown" : materials);
+
     return {
-        file:       relativePath + filename,
-        thumbFile:  relativePath + "thumbs/" + filename,
-        year:       year,
-        title:      title,
-        dimensions: dimensions,
-        materials:  materials,
-        tooltipContents: tooltipContents
+        file:            relativePath + filename,
+        thumbFile:       relativePath + "thumbs/" + filename,
+        year:            year,
+        title:           title,
+        dimensions:      dimensions,
+        materials:       materials,
+        tooltipContents: tooltipContents,
+        fancyboxCaption: fancyboxCaption
     };
 }
 

@@ -116,6 +116,9 @@ a {
     a {
         display:inline-block;
         font-size:12px;
+        @include respond-to(phone) {
+            line-height:40px;
+        }
         font-weight:bold;
         letter-spacing: 2px;
         text-transform:uppercase;
@@ -133,6 +136,9 @@ a {
 .home-link {
     position:absolute;
     top:15px;
+    @include respond-to(phone) {
+        top:25px;
+    }
     left:10px;
     font-size:11px;
     text-transform:uppercase;
@@ -142,7 +148,7 @@ a {
     text-decoration:none;
     border-bottom:1px dashed darken($linkColor,100%);
     margin:0 10px;
-    opacity:0.7;
+    opacity:0.8;
     &:hover {
         opacity:1;
         border-bottom:1px dashed darken($linkColor,20%);

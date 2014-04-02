@@ -18,7 +18,6 @@ AMAZON_S3_URL=${AMAZON_S3_QUILTS_BUCKET}
 LOCAL_ARTWORKS_DIR=${ARTWORKS_DIR}
 
 upload:
-	echo $(GA_TRACKING_CODE)
 	grunt filter --gaTrackingCode=${GA_TRACKING_CODE}
 	aws s3 sync --delete build ${AMAZON_S3_URL}
 

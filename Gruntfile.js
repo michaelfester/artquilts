@@ -35,6 +35,8 @@ var artistDetails = function(filterCopyrighted) {
         'kooning':      { name:'Kooning',      born:'1904', died:'1997', isMain:false, license:'copyrighted'},
         'miro':         { name:'Miró',         born:'1893', died:'1983', isMain:false, license:'copyrighted'},
         'giotto':       { name:'Giotto',       born:'1266', died:'1337', isMain:false, license:'public'},
+        'nolde':        { name:'Nolde',        born:'1780', died:'1956', isMain:false, license:'copyrighted'},
+        'ingres':       { name:'Ingres',       born:'1800', died:'1867', isMain:false, license:'copyrighted'},
         'ofili':        { name:'Ofili',        born:'1968', died:'',     isMain:false, license:'copyrighted'},
         'yamagata':     { name:'Yamagata',     born:'1948', died:'',     isMain:false, license:'copyrighted'},
         'weiwei':       { name:'Weiwei',       born:'1957', died:'',     isMain:false, license:'copyrighted'},

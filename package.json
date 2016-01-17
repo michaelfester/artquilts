@@ -2,6 +2,7 @@
   "name": "quilts",
   "version": "0.0.1",
   "devDependencies": {
+    "underscore": "^1.7.0",
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": ">= 0.0.1",
     "grunt-contrib-watch": ">= 0.0.1",

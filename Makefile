@@ -26,6 +26,14 @@ init:
 	mkdir -p data/$(ARTIST_ID)
 	rm -fr build/img/$(ARTIST_ID)
 
+setup:
+	#brew install node
+	npm install -g grunt-cli
+	npm install -g bower
+	sudo gem install compass
+	npm install
+	bower install
+
 grunt:
 	grunt --gaTrackingCode=${GA_TRACKING_CODE}
 

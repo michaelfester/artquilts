@@ -56,12 +56,6 @@ $ grunt && grunt watch
 $ open build/index.html
 ```
 
-To add a Google Analytics tracking code, run `grunt` with the option `--gaTrackingCode`:
-
-```bash
-$ grunt --gaTrackingCode=UA-XXXXX-X
-```
-
 ## Example gallery
 
 An example gallery, using artworks from [WikiPaintings](http://www.wikipaintings.org/) can be found here: [michaelfester.com/quilts](http://michaelfester.com/quilts).
